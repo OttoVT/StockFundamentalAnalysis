@@ -37,7 +37,7 @@ namespace StockFundamentalAnalysis
             {
                 var path = ticker + ".json";
                 var overview = await alphaVantageClient.GetOverviewAsync(ticker);
-                var serialize = JsonConvert.SerializeObject(overview);
+                var serialize = JsonConvert.SerializeObject(overview, Formatting.Indented);
                 if (File.Exists(path))
                 {
                     File.Delete(path);
