@@ -96,7 +96,7 @@ namespace StockFundamentalAnalysis.Common.AlphaVantage
                     return 0m;
                 // customize this to suit your needs
                 return Decimal.Parse(token.ToString(),
-                    System.Globalization.CultureInfo.GetCultureInfo("es-ES"));
+                    System.Globalization.CultureInfo.InvariantCulture);
             }
             if (token.Type == JTokenType.Null && objectType == typeof(decimal?))
             {
@@ -132,7 +132,7 @@ namespace StockFundamentalAnalysis.Common.AlphaVantage
                     return DateTime.MinValue;
                 // customize this to suit your needs
                 return DateTime.Parse(token.ToString(),
-                    System.Globalization.CultureInfo.GetCultureInfo("es-ES"));
+                    System.Globalization.CultureInfo.InvariantCulture);
             }
             if (token.Type == JTokenType.Null && objectType == typeof(DateTime?))
             {
